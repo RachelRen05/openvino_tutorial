@@ -18,7 +18,7 @@ refer to:
 
 # Segmentation -> 
 ```bash
-wget http://download.tensorflow.org/models/object_detection/faster_rcnn_resnet50_coco_2018_01_28.tar.gz
+wget http://download.tensorflow.org/models/object_detection/   .tar.gz
 tar -zxvf faster_rcnn_resnet50_coco_2018_01_28.tar.gz
 #fp32
 python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py --input_model frozen_inference_graph.pb --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --data_type FP32 --output_dir ./output/FP32
@@ -26,7 +26,8 @@ python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py --input_mo
 python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py --input_model frozen_inference_graph.pb --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json --tensorflow_object_detection_api_pipeline_config pipeline.config --reverse_input_channels --data_type FP16 --output_dir ./output/FP16
 ```
 refer to:
-
+1. [https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/instance_segmentation.md](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/instance_segmentation.md)
+2. [https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
 
 # People Reid
 
